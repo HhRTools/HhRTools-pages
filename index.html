@@ -28,11 +28,25 @@
             /* Hält den Text innerhalb des zentrierten Blocks linksbündig */
             text-align: left; 
         }
-        h1 { 
-            font-size: 2.5em;
+        /* Flexbox sorgt dafür, dass Logo und Text sauber nebeneinander stehen */
+        .header-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 15px; /* Abstand zwischen Logo und Text */
             border-bottom: 2px solid #eee; 
             padding-bottom: 12px; 
             margin-top: 0;
+            margin-bottom: 20px;
+        }
+        .header-logo {
+            width: 64px;
+            height: 64px;
+            display: block;
+            border-radius: 4px; /* Optionale leichte Rundung für das Logo */
+        }
+        h1 { 
+            font-size: 2.5em;
+            margin: 0; /* Verhindert ungewollte Abstände */
         }
         h2 { 
             font-size: 1.4em;
@@ -65,7 +79,12 @@
 
     <!-- Der Container sitzt zentriert, der Text darin ist linksbündig -->
     <div class="container">
-        <h1>HhRTools</h1>
+        
+        <!-- Kopfbereich mit Logo und Überschrift -->
+        <div class="header-wrapper">
+            <img src="logo.png" alt="HhRTools Logo" class="header-logo">
+            <h1>HhRTools</h1>
+        </div>
 
         <p>HhRTools develops add-ins and tools for Autodesk Fusion 360, focused on parametric pattern generation for design, laser cutting, engraving, and 3D printing workflows.</p>
 
@@ -76,11 +95,10 @@
 
         <!-- Bereich für Support und Rechtliches -->
         <div class="footer-section">
-            <span>Support: <a href="mailto:HhRTools@gmail.com">HhRTools</a></span>
+            <span>Support: <a href="mailto:HhRTools@gmail.com">HhRTools@gmail.com</a></span>
             <a class="privacy-link" href="privacy.html">Privacy Policy</a>
         </div>
     </div>
 
 </body>
 </html>
-
