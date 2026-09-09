@@ -12,7 +12,6 @@
             background-color: #fafafa;
             margin: 0;
             padding: 0;
-            /* Zentriert den gesamten Inhaltsblock auf der Seite */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -25,79 +24,66 @@
             margin: 40px 20px;
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            /* Hält den Text innerhalb des zentrierten Blocks linksbündig */
             text-align: left; 
         }
-        /* Flexbox sorgt dafür, dass Logo und Text sauber nebeneinander stehen */
-        .header-wrapper {
-            display: flex;
-            align-items: center;
-            gap: 15px; /* Abstand zwischen Logo und Text */
+        .logo {
+            display: block;
+            max-width: 180px;
+            margin: 0 0 20px 0;
+        }
+        h1 { 
+            font-size: 2.2em;
             border-bottom: 2px solid #eee; 
             padding-bottom: 12px; 
             margin-top: 0;
-            margin-bottom: 20px;
-        }
-        .header-logo {
-            width: 64px;
-            height: 64px;
-            display: block;
-            border-radius: 4px; /* Optionale leichte Rundung für das Logo */
-        }
-        h1 { 
-            font-size: 2.5em;
-            margin: 0; /* Verhindert ungewollte Abstände */
         }
         h2 { 
             font-size: 1.4em;
             margin-top: 30px; 
         }
         ul {
-            padding-left: 20px;
+            padding-left: 22px;
         }
         li {
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
-        .footer-section {
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid #eee;
-            display: flex;
-            justify-content: space-between;
-            font-size: 0.95em;
+        .links {
+            margin-top: 10px;
         }
-        .privacy-link {
-            color: #666;
-            text-decoration: none;
+        .links a {
+            margin-right: 16px;
         }
-        .privacy-link:hover {
-            text-decoration: underline;
+        .footer { 
+            margin-top: 50px; 
+            font-size: 0.9em; 
+            color: #666; 
+            border-top: 1px solid #eee; 
+            padding-top: 20px; 
         }
     </style>
     <link rel="icon" type="image/png" href="/HhRTools-pages/logo.png">
 </head>
 <body>
 
-    <!-- Der Container sitzt zentriert, der Text darin ist linksbündig -->
     <div class="container">
-        
-        <!-- Kopfbereich mit Logo und Überschrift -->
-        <div class="header-wrapper">
-            <img src="logo.png" alt="HhRTools Logo" class="header-logo">
-            <h1>HhRTools</h1>
-        </div>
+        <img class="logo" src="/HhRTools-pages/logo.png" alt="HhRTools Logo">
+
+        <h1>HhRTools</h1>
 
         <p>HhRTools develops add-ins and tools for Autodesk Fusion 360, focused on parametric pattern generation for design, laser cutting, engraving, and 3D printing workflows.</p>
 
-        <h2>Products:</h2>
+        <h2>Products</h2>
         <ul>
             <li><strong>Multipattern:</strong> 13 parametric surface pattern generators for Fusion 360</li>
+            <li><strong>Multipattern Demo:</strong> Free preview version &mdash; identical interface and pattern preview, no permanent output</li>
         </ul>
 
-        <!-- Bereich für Support und Rechtliches -->
-        <div class="footer-section">
-            <span>Support: <a href="mailto:HhRTools@gmail.com">HhRTools@gmail.com</a></span>
-            <a class="privacy-link" href="privacy.html">Privacy Policy</a>
+        <div class="footer">
+            <p>Support: <a href="mailto:HhRTools@gmail.com">HhRTools@gmail.com</a></p>
+            <p class="links">
+                <a href="https://hhrtools.github.io/HhRTools-pages/privacy.html">Privacy Policy</a>
+                <a href="https://hhrtools.github.io/HhRTools-pages/terms.html">License Terms &amp; Refund Policy</a>
+            </p>
         </div>
     </div>
 
