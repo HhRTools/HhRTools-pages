@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Multipattern - Parametric Pattern Generator Add-in for Fusion 360 | HhRTools</title>
-    <meta name="description" content="Multipattern is a Fusion 360 add-in with 13 parametric pattern generators (Voronoi, Honeycomb, Bricks and more) for laser cutting, engraving and 3D printing.">
+    <meta name="description" content="Multipattern is a Fusion 360 add-in with 13 parametric pattern generators (Voronoi, Honeycomb, Bionic, Bricks and more) for 3D printing, laser cutting, and CNC machining.">
     <style>
         body { 
             font-family: sans-serif; 
@@ -19,7 +19,7 @@
             min-height: 100vh;
         }
         .container {
-            max-width: 700px;
+            max-width: 750px;
             background: #ffffff;
             padding: 40px;
             margin: 40px 20px;
@@ -39,20 +39,54 @@
             margin-top: 0;
         }
         h2 { 
-            font-size: 1.4em;
+            font-size: 1.5em;
             margin-top: 30px; 
+            color: #111;
+        }
+        h3 {
+            font-size: 1.2em;
+            margin-top: 20px;
+            color: #0055b8;
         }
         ul {
-            padding-left: 22px;
+            padding-left: 20px;
         }
         li {
             margin-bottom: 8px;
+        }
+        .pattern-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 10px;
+            margin-top: 15px;
+            background: #f4f6f8;
+            padding: 15px;
+            border-radius: 6px;
+        }
+        .pattern-item {
+            font-weight: 500;
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: #0696d7;
+            color: #ffffff !important;
+            padding: 12px 24px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            margin-top: 15px;
+            transition: background-color 0.2s;
+        }
+        .cta-button:hover {
+            background-color: #0055b8;
         }
         .links {
             margin-top: 10px;
             display: flex;
             justify-content: space-between;
             width: 100%;
+            flex-wrap: wrap;
+            gap: 10px;
         }
         .footer { 
             margin-top: 50px; 
@@ -71,12 +105,33 @@
 
         <h1>HhRTools</h1>
 
-        <p>HhRTools develops add-ins and tools for Autodesk Fusion 360, focused on parametric pattern generation for design, laser cutting, engraving, and 3D printing workflows.</p>
+        <p>HhRTools develops powerful add-ins and scripts for Autodesk® Fusion®, focused on parametric pattern generation, design automation, laser cutting, engraving, and 3D printing workflows.</p>
 
-        <h2>Products</h2>
-        <ul>
-            <li><a href="https://marketplace.autodesk.com/apps/e949f00f-e46c-4df0-9083-0cfe2c084a34" target="_blank" rel="noopener" style="font-size: 1.25em; font-weight: bold; text-transform: uppercase;">Multipattern</a>: 13 parametric surface pattern generators for Fusion 360</li>
-        </ul>
+        <h2>Featured Product</h2>
+        
+        <h3>Multipattern – Parametric Surface Pattern Generator</h3>
+        <p><strong>Multipattern</strong> is a versatile Autodesk® Fusion® add-in designed for creating parametric surface patterns directly on any planar face or sketch boundary. Easily generate custom geometries with real-time live preview, precise margin adjustments, and instant sketch output for extrusions, cuts, or engraving.</p>
+
+        <h4>13 Included Pattern Generators:</h4>
+        <div class="pattern-grid">
+            <div class="pattern-item">✔ Voronoi</div>
+            <div class="pattern-item">✔ Honeycomb</div>
+            <div class="pattern-item">✔ Bionic</div>
+            <div class="pattern-item">✔ Bricks</div>
+            <div class="pattern-item">✔ Circles</div>
+            <div class="pattern-item">✔ Drops</div>
+            <div class="pattern-item">✔ GeoAbstract</div>
+            <div class="pattern-item">✔ RandomBionic</div>
+            <div class="pattern-item">✔ RandomCircles</div>
+            <div class="pattern-item">✔ RandomLines</div>
+            <div class="pattern-item">✔ RandomStars</div>
+            <div class="pattern-item">✔ Stars</div>
+            <div class="pattern-item">✔ Triangles</div>
+        </div>
+
+        <p style="margin-top: 25px;">
+            <a class="cta-button" href="https://marketplace.autodesk.com/apps/e949f00f-e46c-4df0-9083-0cfe2c084a34" target="_blank" rel="noopener">Get Multipattern on Autodesk App Store →</a>
+        </p>
 
         <div class="footer">
             <p class="links">
